@@ -40,7 +40,10 @@ public class Empleado {
        nombreDepartamento = dep;
     }
     
-    
+    /**
+     * Metodos get y set de los atributos
+     * @return 
+     */
     public int getIdEmpleado(){
         return idEmpleado;
     }
