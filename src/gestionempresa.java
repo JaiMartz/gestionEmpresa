@@ -9,13 +9,17 @@
  * @author Jairo
  */
 public class gestionempresa {
-
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here   
-        
+
     }
     
-}
+
+    private static void imprimir() {
+        colecciones();
+        listado();
+    }
+} 
