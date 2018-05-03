@@ -74,4 +74,10 @@ public class Empleado {
     public void setSalario(float sal){
         this.salario = sal;
     }
+    public String getNombreDepartamento(){
+        return nombreDepartamento;
+    }
+    public void setNombreDepartamento(String nomDep){
+        this.nombreDepartamento = nomDep;
+    }
 }
