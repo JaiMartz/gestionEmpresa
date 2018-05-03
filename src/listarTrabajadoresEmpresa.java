@@ -10,11 +10,22 @@ import java.util.ArrayList;
  */
 public class listarTrabajadoresEmpresa {
     
+    public static void main(String[] args) {
+        // TODO code application logic here   
+
+           
+    ArrayList<Departamento> listaDepartamentos = new ArrayList<>();
+    ArrayList<Empleado> listaEmpleados = new ArrayList<>();
+        
+       
+    
+
     Departamento desarrollo = new Departamento ("Desarrollo","Departamento encargado del desarrollo software");
     Departamento sistemas = new Departamento ("Sistemas","Departamento encargado de mantener los sistemas");
     Departamento contabilidad = new Departamento ("Contabilidad","Departamento encargado de la gestion economica");
     Departamento ventas = new Departamento ("Ventas","Departamento encargado de la realización de ventas");
-    
+    Departamento D;
+
     
     //Creamos los 12 objetos empleados con sus parametros
     Empleado empleado1 = new Empleado(1,"David","Gutierrez","Programador",2900,"Desarrollo");
@@ -29,20 +40,15 @@ public class listarTrabajadoresEmpresa {
     Empleado empleado10 = new Empleado(10,"Aurora","Boreal", "Comercial", 1270,"Ventas");
     Empleado empleado11 = new Empleado(11,"Lourdes", "Hernandez","Comercial", 1050, "Ventas");
     Empleado empleado12 = new Empleado(12,"Macarena","Arnedo","Comercial", 1150,"Ventas");
-    
-    //Creamos un arraylist de tipo departamento
-    ArrayList<Departamento> listaDepartamentos = new ArrayList<>();
-    ArrayList<Empleado> listaEmpleados = new ArrayList<>();
-    
+    Empleado E;
 
 
+    //Departamentos
     listaDepartamentos.add(desarrollo);
     listaDepartamentos.add(sistemas);
     listaDepartamentos.add(contabilidad);
     listaDepartamentos.add(ventas);
-    
-
-       
+    //Empleados   
     listaEmpleados.add(empleado1);
     listaEmpleados.add(empleado2);
     listaEmpleados.add(empleado3);
@@ -57,27 +63,33 @@ public class listarTrabajadoresEmpresa {
     listaEmpleados.add(empleado12);
 
 
-    /**
-     *
-     */
-    public void listado(){
-        /*
-        for(int j = 0; j<listaDepartamentos.size(); j++){
-        System.out.println(listaDepartamentos.get(j).getNombre());
-        System.out.println(listaDepartamentos.get(j).getDescripcion());
-                
-        for(int i = 0; i<listaEmpleados.size(); i++){
-            
-         if(listaEmpleados.get(i).getNombreDepartamento().equals(listaDepartamentos.get(i).getNombre())){
-            System.out.println(listaEmpleados.get(i).getIdEmpleado());
-            System.out.println(listaEmpleados.get(i).getNombre());
-            System.out.println(listaEmpleados.get(i).getApellidos());
-            System.out.println(listaEmpleados.get(i).getTrabajo());
-            System.out.println(listaEmpleados.get(i).getSalario());
+ 
+        for (int i=0; i<listaDepartamentos.size();i++) {
+        D = listaDepartamentos.get (i);
+        System.out.println("");
+        System.out.println("Información detallada del Departamento de "+D.getNombre());
+        System.out.println("");
+        System.out.println("Nombre de Departamento:..... "+D.getNombre());
+        System.out.println("Descripción breve:.......... "+D.getDescripcion());
+        System.out.println("");
+        System.out.println("");
+        System.out.println("Listado detallado de los Empleados del Departamento de "+D.getNombre());
+      
+        
+            for (int j=0; j<listaEmpleados.size();j++){
+            E = listaEmpleados.get (j);
+                if (D.getNombre()== E.getNombreDepartamento()){
+                System.out.println("Código de Empleado:....... "+E.getIdEmpleado());
+                System.out.println("Nombre de Empleado:....... "+E.getNombre());
+                System.out.println("Apellidos de Empleado:.... "+E.getApellidos());
+                System.out.println("Puesto de trabajo:........ "+E.getTrabajo());
+                System.out.println("Salario:.................. "+E.getSalario());
+                System.out.println("Departamento:............. "+E.getNombreDepartamento());
+                System.out.println("");
+                }
             }
-         
-         }
-        }*/
-    }
+        
+        } 
+    }  
 }
 
